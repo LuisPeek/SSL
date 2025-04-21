@@ -1,6 +1,6 @@
 "VAMOS PEEK"
 
-"Compilador Ubuntu"
+"Compilador "
 
 "Version del Compilador 14.2.0-4"
 
