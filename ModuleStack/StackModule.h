@@ -1,0 +1,6 @@
+/*
+a. Push.
+b. Pop.
+c. IsEmpty.
+d. IsFull.
+*/
