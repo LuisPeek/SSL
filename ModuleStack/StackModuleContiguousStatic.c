@@ -3,9 +3,8 @@
 #include <stdlib.h>
 
 
-StackModule* mystack= NULL;
 
-void inicializacionStack(){
+void inicializacionStack(StackModule* mystack){
     mystack = malloc(sizeof(StackModule));
     mystack->Top=0;
 
@@ -54,21 +53,6 @@ void Pop(StackModule* stackModule){
 }
 
 int IsEmpty(StackModule* stackModule){
-    return stackModule -> Top <= 0? 1:0;
+    return stackModule->Top <= 0? 1:0;
 }
-int main()
-{ 
-    inicializacionStack();
-    Push(mystack,10);
-    Push(mystack,20);
-    Push(mystack,30);
-    Pop(mystack);
-    Push(mystack,40);
-    printf("Is Full: %d \n",IsFull(mystack));
-    Pop(mystack);
-    Pop(mystack);
-    Pop(mystack);
-    Pop(mystack);
-    mostraStackContinuo(mystack);
-    return 0;
-}
+
