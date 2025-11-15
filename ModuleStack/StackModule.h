@@ -7,6 +7,7 @@ d. IsFull.
 #ifndef STACKMODULE_H
 #define STACKMODULE_H
 
+
 #define CANTIDADMAX 4
 typedef int StackItem;
 
@@ -28,7 +29,7 @@ typedef struct StackModule{
     Dinamico* estructuraDinamica;
 }StackModule;
 
-
+void inicializacionStack(StackModule* stack);
 void  Push (StackModule* st, StackItem item);
 StackItem Pop (StackModule* st);
 int IsEmpty (StackModule* st);

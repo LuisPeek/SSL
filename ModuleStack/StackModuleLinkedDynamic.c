@@ -1,17 +1,16 @@
 #include "StackModule.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "assert.h"
 
 
 void inicializacionStack(StackModule* stack){
-    
+    printf("HOAL\n");
     while (stack->estructuraDinamica != NULL)
     {
         Dinamico* aux = stack->estructuraDinamica;
         stack->estructuraDinamica = stack->estructuraDinamica->sgte;
-        free( aux);
-        /* code */
+        free(aux);
     }
 }
 void Push(StackModule* stack , StackItem dato){
@@ -59,20 +58,4 @@ void mostrarLista(StackModule* stack) {
         }
         
     
-}
-int main(){
-    StackModule stack;
-
-    inicializacionStack(&stack);
-
-    Push(&stack, 10);
-    Push(&stack, 20);
-    Push(&stack, 30);
-
-    mostrarLista(&stack);
-
-    printf("Pop: %d\n", Pop(&stack));
-    printf("Pop: %d\n", Pop(&stack));
-
-    mostrarLista(&stack);
 }
