@@ -10,17 +10,28 @@ d. IsFull.
 #define CANTIDADMAX 4
 typedef int StackItem;
 
-
-typedef struct StackModule{
+typedef struct Statico{
     StackItem* Stack;
     int Top;
+}Statico;
+
+
+typedef struct Dinamico {
+    StackItem item;
+    struct Dinamico* sgte;
+}Dinamico;
+
+
+
+typedef struct StackModule{
+    Statico estructuraStactica;
+    Dinamico* estructuraDinamica;
 }StackModule;
 
 
 void  Push (StackModule* st, StackItem item);
-
-void Pop (StackModule* st);
-
+StackItem Pop (StackModule* st);
 int IsEmpty (StackModule* st);
 int IsFull (StackModule* st);
+
 #endif 
