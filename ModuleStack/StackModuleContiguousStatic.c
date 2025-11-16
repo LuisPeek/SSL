@@ -14,7 +14,7 @@ void inicializacionStack(StackModule* mystack){
 void Push(StackModule* stackModule, StackItem item){
     StackItem *p = stackModule->estructuraStactica.Stack;
     if (IsFull(stackModule)){
-        printf("Stack Overflow\n");
+        printf("Stack lleno\n");
     }else
     {
         *(p + stackModule->estructuraStactica.Top) = item;
@@ -42,9 +42,6 @@ StackItem Pop(StackModule* stackModule){
     if(IsEmpty(stackModule)){
         printf("EL Stack esta vacio\n");
     }else{
-        printf("top antes de pop %d\n",stackModule->estructuraStactica.Top);
-        printf("Elemento %d eliminado \n",(*(p + stackModule->estructuraStactica.Top-1)));
-        
         *(p + stackModule ->estructuraStactica.Top) = 0;
         stackModule->estructuraStactica.Top--;
 

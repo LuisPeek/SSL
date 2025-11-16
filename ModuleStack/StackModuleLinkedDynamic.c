@@ -5,7 +5,6 @@
 
 
 void inicializacionStack(StackModule* stack){
-    printf("HOAL\n");
     while (stack->estructuraDinamica != NULL)
     {
         Dinamico* aux = stack->estructuraDinamica;
@@ -16,7 +15,7 @@ void inicializacionStack(StackModule* stack){
 void Push(StackModule* stack , StackItem dato){
     Dinamico* nuevoNodo = malloc(sizeof(Dinamico));
     if( nuevoNodo == NULL) {
-        printf("Error de memoria\n");
+        printf("Error de memoria \n");
         return;
     }
         nuevoNodo->item= dato;
@@ -26,7 +25,7 @@ void Push(StackModule* stack , StackItem dato){
 }
 StackItem Pop(StackModule* stack){
     if(IsEmpty(stack)){
-        printf("estaVacia");
+        printf("Stack Vacio");
         return -1;
     }else{
         StackItem valor ;

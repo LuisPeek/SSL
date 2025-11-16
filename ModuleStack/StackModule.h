@@ -7,7 +7,7 @@ d. IsFull.
 #ifndef STACKMODULE_H
 #define STACKMODULE_H
 
-
+#define ITERATIONS 20
 #define CANTIDADMAX 4
 typedef int StackItem;
 

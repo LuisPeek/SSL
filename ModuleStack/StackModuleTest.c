@@ -7,8 +7,7 @@ void testStackInicializacion() {
     StackModule pila ;
     pila.estructuraDinamica = NULL;
     inicializacionStack(&pila);
-    
-
+    assert(!IsFull(&pila));
 }
 void testStackPushPop() {
     StackModule pila;
@@ -26,8 +25,8 @@ void testStackFull(){
     Push(&pila,2);
     Push(&pila,3);
     Push(&pila,4);
-    if(pila.estructuraDinamica->sgte != NULL){
-
+    if(pila.estructuraDinamica != NULL){ 
+        /// test dinamico 
         assert(!IsFull(&pila));
     }else{
         assert(IsFull(&pila));
@@ -47,7 +46,7 @@ void testStackDinamico(){
     Push(&pila,300);
     Push(&pila,200);
     Push(&pila,100);
-    if(pila.estructuraDinamica !=NULL){
+    if(pila.estructuraDinamica !=NULL){ /// test dinamico 
         assert(Pop(&pila) == 100);
         assert(Pop(&pila) == 200);
         assert(Pop(&pila) == 300);
@@ -61,18 +60,16 @@ void testStackDinamico(){
 int main(){
         printf("TEST DE INICIALIZACION DE LA PILA\n");
         testStackInicializacion();
-        printf("PASO TEST\n");
         printf("\n");
         printf("TEST DE PUSH Y POP\n");
         testStackPushPop();
-        printf("PASO TEST \n");
         printf("\n");
         printf("TEST DE STTACK FULL\n");
         testStackFull();
-        printf("PASO TEST\n");
         printf("\n");
         printf("TEST DE STTACK DINAMICO\n");
         testStackDinamico();
+        printf("PASARON TODOS LOS TEST\n");
 
     return 0;
 }
