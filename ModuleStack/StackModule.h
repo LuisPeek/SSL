@@ -10,13 +10,10 @@ typedef struct Statico{
     int Top;
 }Statico;
 
-
 typedef struct Dinamico {
     StackItem item;
     struct Dinamico* sgte;
 }Dinamico;
-
-
 
 typedef struct StackModule{
     Statico estructuraStactica;
@@ -29,4 +26,4 @@ StackItem Pop (StackModule* st);
 int IsEmpty (StackModule* st);
 int IsFull (StackModule* st);
 
-#endif S
+#endif /// TERMINADO

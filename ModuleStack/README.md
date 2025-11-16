@@ -10,11 +10,21 @@ Que se este verificando todo el tiempo si el stack esta vacio o lleno de esta fo
 
 
 ### c. ¿Qué cambios haría en el diseño para que el stack sea genérico, es decir permita elementos de otros tipos que no sean int? ¿Qué implicancia tiene el cambio?
-
+Se podria utilizar en vez de un ``StackItem`` un ``void*`` lo cual le daria versatilidad al programa (parecido a las function de Js) , el problema recairia en que tendriamos que tener màs cuidado a la hora de retornar un valor ya que tendriamos error de Type.
 
 ### d. Proponga un nuevo diseño para que el módulo pase a ser un tipo de dato, es decir, permita a un programa utilizar más de un stack.
+Una forma seria definir funciones  que retorne un espacio en memoria ejemplo
+///
+typedef int StackItem;
+stack_tDato *stack_create_static(size_t capacity);
+stack_tDato *stack_create_dynamic(void);   
 
-
+int Push(stack_tDato *s, StackItem item);   
+stackItem Pop(stack_tDato *s, StackItem *out);    
+int IsEmpty(const stack_tDato *s);
+int IsFull(const stack_tDato *s);          
+///
+en este caso solo tendriamos que instanciar los diferentes stack y sus respectivos metodos que interior mente funcionarian de forma diferente pero respetando el tipo de dato.
 
 # BENCHMARK
 

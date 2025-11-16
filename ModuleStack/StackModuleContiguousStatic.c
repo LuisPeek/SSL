@@ -52,3 +52,5 @@ StackItem Pop(StackModule* stackModule){
 int IsEmpty(StackModule* stackModule){
     return stackModule->estructuraStactica.Top <= 0? 1:0;
 }
+
+// TERMINADO

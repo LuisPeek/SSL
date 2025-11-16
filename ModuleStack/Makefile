@@ -27,6 +27,5 @@ programaStatic : StackModuleContiguousStatic.c
 programaDinamic: StackModuleLinkedDynamic.c
 	gcc StackModuleLinkedDynamic.c StackModuleTest.c -o programaDinamic
 
-
 clean : 
 	rm -f programaStatic programaDinamic banchMarkDynamic banchMarkStatic
