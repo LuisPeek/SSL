@@ -26,7 +26,7 @@ int IsEmpty(const stack_tDato *s);
 int IsFull(const stack_tDato *s);          
 ///
 ```
-en este caso solo tendriamos que instanciar los diferentes stack y sus respectivos metodos que interior mente funcionarian de forma diferente pero respetando el tipo de dato.
+en este caso solo tendriamos que instanciar los diferentes stack y sus respectivos metodos que interiormente funcionarian de forma diferente pero respetando el tipo de dato.
 
 # BENCHMARK
 
