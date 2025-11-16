@@ -1,9 +1,3 @@
-/*
-a. Push.
-b. Pop.
-c. IsEmpty.
-d. IsFull.
-*/
 #ifndef STACKMODULE_H
 #define STACKMODULE_H
 
@@ -35,4 +29,4 @@ StackItem Pop (StackModule* st);
 int IsEmpty (StackModule* st);
 int IsFull (StackModule* st);
 
-#endif 
+#endif S
