@@ -14,6 +14,7 @@ Se podria utilizar en vez de un ``StackItem`` un ``void*`` lo cual le daria vers
 
 ### d. Proponga un nuevo diseño para que el módulo pase a ser un tipo de dato, es decir, permita a un programa utilizar más de un stack.
 Una forma seria definir funciones  que retorne un espacio en memoria ejemplo
+```
 ///
 typedef int StackItem;
 stack_tDato *stack_create_static(size_t capacity);
@@ -24,6 +25,7 @@ stackItem Pop(stack_tDato *s, StackItem *out);
 int IsEmpty(const stack_tDato *s);
 int IsFull(const stack_tDato *s);          
 ///
+```
 en este caso solo tendriamos que instanciar los diferentes stack y sus respectivos metodos que interior mente funcionarian de forma diferente pero respetando el tipo de dato.
 
 # BENCHMARK
