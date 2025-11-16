@@ -3,8 +3,8 @@
 
 # Preguntas y respuestas
 ### a. ¿Cuál es la mejor implementación? Justifique.
-
-
+La elección de la implementación del stack dependerá del proyecto en el que se utilice. Por ejemplo, en una aplicación destinada a almacenar los datos de un inventario, el tamaño estará acotado y no superará un límite definido. En este caso, la mejor opción sería implementar un Stack ContiguousStatic, ya que ofrece eficiencia y simplicidad cuando la capacidad es fija.
+En cambio, para una aplicación en la que se deban guardar los usuarios atendidos, la cantidad puede variar de forma dinámica. En este escenario resulta más conveniente utilizar un Stack Dynamic, dado que permite ajustar su tamaño según las necesidades de la aplicación.
 ### b. ¿Qué cambios haría para que no haya precondiciones? ¿Qué implicancia tiene el cambio?
 
 
